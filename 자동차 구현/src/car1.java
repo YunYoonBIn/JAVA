@@ -21,9 +21,10 @@ public class car1 {
 	    	System.out.println("시동");
 	    	System.out.println("목적지를 정하고 숫자나 역 이름을 입력해주세요.");
 	    	System.out.println("주의! 공백을 넣지 말아주세요.");
-	    	System.out.println(">> 1. 서울역");
-	    	System.out.println(">> 2. 인천공항역");
-	    	System.out.println(">> 3. 강남역");
+	    	System.out.println("현제위치 : 경기도 남양주시");
+	    	System.out.println(">> 1. 서울역 [연료 -50]");
+	    	System.out.println(">> 2. 인천공항역 [연료 -80]");
+	    	System.out.println(">> 3. 강남역 [연료 -30]");
 	    	car_fuel = true;
 	    	
 	    	while (car_fuel == true) {
@@ -53,9 +54,10 @@ public class car1 {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-
+                    fuel = fuel - 50;
 					System.out.println("서울역 도착!");
 					System.out.println("시동을 끕니다.");
+					System.out.println("남은 연료 :" + fuel);
 					break;
 			
 				}else if (car_destination.equals("인천공항역")||car_destination.equals("2")) {
@@ -83,8 +85,10 @@ public class car1 {
 						e.printStackTrace();
 					}
 					
+					fuel = fuel - 80;
 					System.out.println("인천공항역 도착!");
 					System.out.println("시동을 끕니다.");
+					System.out.println("남은 연료 :" + fuel);
 					break;
 				
 			    }else if (car_destination.equals("강남역")||car_destination.equals("3")) {
@@ -111,9 +115,10 @@ public class car1 {
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-			     	
+			     	fuel = fuel - 30;
 			     	System.out.println("강남역 도착!");
 			     	System.out.println("시동을 끕니다.");
+			     	System.out.println("남은 연료 :" + fuel);
 			     	break;
 			}else {
 				System.out.println("다시 입력해 주세요.");
@@ -172,7 +177,7 @@ public class car1 {
 			System.out.println("보유돈 :"+" "+money);
 			System.out.println("현제 연료" +" "+"100/" +fuel);
 			break;
-			
+					
          }else if (Buy.equals("N")||Buy.equals("n")) {
 			System.out.println("연료를 넣지 않겠습니다.");
 			System.out.println("보유돈 :" + " " + money);
@@ -192,9 +197,10 @@ public class car1 {
 			
 	    	System.out.println("목적지를 정하고 숫자나 역 이름을 입력해주세요.");
 	    	System.out.println("주의! 공백을 넣지 말아주세요.");
-	    	System.out.println(">> 1. 서울역");
-	    	System.out.println(">> 2. 인천공항역");
-	    	System.out.println(">> 3. 강남역");
+	    	System.out.println("현제위치 : 경기도 남양주시");
+	    	System.out.println(">> 1. 서울역 [연료 -50]");
+	    	System.out.println(">> 2. 인천공항역 [연료 -80]");
+	    	System.out.println(">> 3. 강남역 [연료 -30]");
 	    	
 	    	while (fuel >= 11) {
 String car_destination = input.nextLine();
@@ -223,9 +229,11 @@ String car_destination = input.nextLine();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
-
+                    
+					fuel = fuel - 50;
 					System.out.println("서울역 도착!");
 					System.out.println("시동을 끕니다.");
+					System.out.println("남은 연료 :" + fuel);
 					break;
 			
 				}else if (car_destination.equals("인천공항역")||car_destination.equals("2")) {
@@ -253,8 +261,10 @@ String car_destination = input.nextLine();
 						e.printStackTrace();
 					}
 					
+					fuel = fuel - 80;
 					System.out.println("인천공항역 도착!");
 					System.out.println("시동을 끕니다.");
+					System.out.println("남은 연료 :" + fuel);
 					break;
 				
 			    }else if (car_destination.equals("강남역")||car_destination.equals("3")) {
@@ -282,16 +292,16 @@ String car_destination = input.nextLine();
 						e.printStackTrace();
 					}
 			     	
+			     	fuel = fuel - 30;
 			     	System.out.println("강남역 도착!");
 			     	System.out.println("시동을 끕니다.");
+			     	System.out.println("남은 연료 :" + fuel);
 			     	break;
+			    }
+	    	}
 		}
-		
-		
 			}
 		}
 	}
-}
-}
 }
 	
